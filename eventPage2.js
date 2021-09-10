@@ -1,28 +1,10 @@
-let menuItem = {
-    "id": "Speak",
-    "title": "Speak",
-    "contexts": ["selection"]
-};
-
-let menuItem2 = {
+var menuItem2 = {
     "id": "Wikit",
     "title": "Wikit",
     "contexts": ["selection"]
 };
 
-chrome.contextMenus.create(menuItem);
 chrome.contextMenus.create(menuItem2);
-
-chrome.contextMenus.onClicked.addListener(function(clickData){ 
-    if (clickData.menuItemId == "Speak" && clickData.selectionText){        
-       chrome.tts.speak(clickData.selectionText,
-                        {
-                            'rate': 0.7
-                        });         
-    }
-});
-
-
 
 function fixedEncodeURI (str) {
     return encodeURI(str).replace(/%5B/g, '[').replace(/%5D/g, ']');
