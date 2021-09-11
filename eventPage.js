@@ -20,7 +20,7 @@ chrome.contextMenus.onClicked.addListener(function(clickData){
 
 let menuItem2 = {
     "id": "Wikit",
-    "title": "Wikit",
+    "title": "Wikipedia",
     "contexts": ["selection"]
 };
 
