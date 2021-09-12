@@ -38,7 +38,6 @@ min-width: 100%;
 min-height: 100%;
 transform: translateX(-50%) translateY(-50%);
 z-index: -100;
-background-image: url(../img/tm-astro-bg.jpg);
 background-position: center;
 background-size: cover;
 background-repeat: no-repeat;
