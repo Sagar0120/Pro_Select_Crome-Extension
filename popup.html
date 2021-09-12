@@ -5,29 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        #input{
-            border-radius: 5cm;
-        }
-        .list{
-            color: blueviolet;
-        }
-        .input{
-            color: rgb(51, 223, 45);
-            font-size: medium;
-        }
-        body{
-            background-color: yellow;
-        }
+    <link rel="stylesheet" href="style.css">
     </style>
 </head>
 <body>
-    <h3 style="color: red;">Feachers</h3>
-    <li class = "list">Speak words</li>
+    <video autoplay muted loop id="bg-video">
+        <source src="gfp-astro-timelapse.mp4" type="video/mp4">
+    </video>
+    <h1 style="color: red;">Features</h1>
+    <li class = "list">Pronounce</li>
     <li class = "list">Translate</li>
-    <li class="list">Search on youtube</li>
-    <li class="list">Search on wikipeadia</li>
-    <li class="list">Search related images</li>
-    <p class="input"> <b>feed back:</b><input type="text" id="input"></p>
+    <li class="list">Search on YouTube</li>
+    <li class="list">Wikipedia</li>
+    <li class="list">Related images</li>
+    <p class="feedback"><b>How Pro Select can be improved</b><input type="text" class="input"></p>
+    <button style="margin-left:auto;margin-right:auto;display:block;margin-bottom:0%">Submit</button>
 </body>
 </html>

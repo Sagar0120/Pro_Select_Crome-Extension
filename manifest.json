@@ -11,8 +11,7 @@
   
   
     "background": {
-      "scripts": ["eventPage.js"],
-      "persistent": false
+      "scripts": ["eventPage.js"]
     },
     
     "permissions": [     

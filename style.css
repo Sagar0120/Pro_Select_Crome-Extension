@@ -1,0 +1,45 @@
+h1{
+    text-align: center;
+}
+.list{
+    color: white;
+    font-size: medium;
+    padding: 5px;
+    margin: 5px;
+}
+.input{
+    color: purple;
+    font-size: medium;
+    border-radius: 5px;
+    text-align: center;
+}
+.input:hover,
+.input:focus {
+    background-color: white;
+}
+body{
+    padding-left: 30px;
+    padding-right: 30px;
+    max-width: 900px;
+}
+.feedback{
+    color: purple;
+    font-size: medium;
+    border-radius: 5px;
+    text-align: center;
+}
+#bg-video {
+position: fixed;
+left: 50%;
+top: 50%;
+bottom: auto;
+right: auto;
+min-width: 100%;
+min-height: 100%;
+transform: translateX(-50%) translateY(-50%);
+z-index: -100;
+background-image: url(../img/tm-astro-bg.jpg);
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+}
