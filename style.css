@@ -18,14 +18,15 @@ h1{
     display:block;
     margin-bottom:0%;
 }
-.btn:hover,
 h1:hover {
     background-color: white;
 }
 body{
-    padding-left: 30px;
-    padding-right: 30px;
-    max-width: 900px;
+    min-width: 200px; /* your desired width */
+    max-width: 100%;
+    position: relative;
+    vertical-align:middle;
+
 }
 .feedback{
     color: yellow;
