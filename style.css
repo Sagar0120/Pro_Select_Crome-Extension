@@ -2,8 +2,9 @@ h1{
     text-align: center;
     color: red;
 }
-#layout{
-    box-shadow: 0 10px 20px rgba(255,255,255,0.19), 0 6px 6px rgba(255, 255, 255, 0.23);
+h2{
+    font-size: 30px;
+    color: blue;
 }
 .list{
     color: white;
@@ -11,44 +12,25 @@ h1{
     padding: 5px;
     margin: 5px;
 }
-.input{
-    color: purple;
-    font-size: medium;
-    border-radius: 5px;
-}
-.btn{
-    margin-left:auto;
-    margin-right:auto;
-    display:block;
-    margin-bottom:0%;
-}
 h1:hover {
     background-color: white;
 }
 body{
-    min-width: 200px; /* your desired width */
+    min-width: 250px; /* your desired width */
+    min-height: 255px;
     max-width: 100%;
-    position: relative;
-    vertical-align:middle;
-
-}
-.feedback{
-    color: yellow;
-    font-size: large;
-    border-radius: 5px;
-    text-align: center;
 }
 #bg-video {
-position: fixed;
-left: 50%;
-top: 50%;
-bottom: auto;
-right: auto;
-min-width: 100%;
-min-height: 100%;
-transform: translateX(-50%) translateY(-50%);
-z-index: -100;
-background-position: center;
-background-size: cover;
-background-repeat: no-repeat;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    bottom: auto;
+    right: auto;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: -100;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }

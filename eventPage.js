@@ -11,12 +11,12 @@ chrome.contextMenus.onClicked.addListener(function(clickData){
     if (clickData.menuItemId == "Speak" && clickData.selectionText){        
        chrome.tts.speak(clickData.selectionText,
                         {
-                            'rate': 0.7
+                            'rate': 0.6
                         });         
     }
 });
 
-// for wiki
+// for wikipedia
 
 let menuItem2 = {
     "id": "Wikit",
@@ -123,3 +123,21 @@ chrome.contextMenus.onClicked.addListener(function(clickData){
         chrome.windows.create(createData, function(){});        
     }
 });
+
+/*chrome.browserAction.onClicked.addListener(function(clickData){
+    let target = clickData.target;
+    if(target.matches('.clickableBtn')){
+        let gfg = clickData.document.getElementById("gfgkey").value;
+        let convert = JSON.stringify(gfg);
+        let gfgUrl =  "https://www.geeksforgeeks.org/" + convert + "/";
+        let createData = {
+            "url": gfgUrl,
+            "type": "popup",
+            "top": 5,
+            "left": 5,
+            "width": screen.availWidth/2,
+            "height": screen.availHeight/2
+        };
+        chrome.windows.create(createData,function(){});
+    }
+});*/
