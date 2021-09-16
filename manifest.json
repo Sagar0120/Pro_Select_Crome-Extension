@@ -2,7 +2,7 @@
     "manifest_version": 2,
   
     "name": "Pro Select",
-    "description": "Extension to speak or find meaning in wikipeadia selected text ",
+    "description": "Pro Select Extension helps you finding the correct prounciation of word/s and it translates word or sentence to Hindi, If user want to deep dive into the word they can look for it Wikipedia Page and to get visuals user can watch the YouTube videos about that word and if user wants to refer to static visiuals user can look for Related Images",
     "version": "1.0",
 
     "browser_action":{

@@ -1,14 +1,16 @@
 h1{
     text-align: center;
-    color: red;
+    color: rgb(51, 166, 233);
+    font-size: 35px;
 }
 h2{
-    font-size: 30px;
-    color: blue;
+    font-size: 28px;
+    margin-left: 10px;
+    color: rgb(222, 224, 90);
 }
 .list{
     color: white;
-    font-size: medium;
+    font-size: 20px;
     padding: 5px;
     margin: 5px;
 }
@@ -16,8 +18,8 @@ h1:hover {
     background-color: white;
 }
 body{
-    min-width: 250px; /* your desired width */
-    min-height: 255px;
+    min-width: 275px; /* your desired width */
+    min-height: 275px;
     max-width: 100%;
 }
 #bg-video {

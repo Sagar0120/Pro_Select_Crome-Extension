@@ -1,7 +1,7 @@
 // for speak
 let menuItem1 = {
     "id": "Speak",
-    "title": "Speak",
+    "title": "Pronunciation",
     "contexts": ["selection"]
 };
 
@@ -11,20 +11,46 @@ chrome.contextMenus.onClicked.addListener(function(clickData){
     if (clickData.menuItemId == "Speak" && clickData.selectionText){        
        chrome.tts.speak(clickData.selectionText,
                         {
-                            'rate': 0.6
+                            'rate': 0.5
                         });         
+    }
+});
+
+// to translate
+
+let menuItem2 = {
+    "id": "translate",
+    "title": "Translation",
+    "contexts": ["selection"]
+};
+
+chrome.contextMenus.create(menuItem2);
+
+chrome.contextMenus.onClicked.addListener(function(clickData){   
+    if (clickData.menuItemId == "translate" && clickData.selectionText){    
+        let convert = JSON.stringify(clickData.selectionText)
+        let TranslateUrl = "https://translate.google.com/?sl=en&tl=hi&text=" + convert + "&op=translate";
+        let createData = {
+            "url": TranslateUrl,
+            "type": "popup",
+            "top": 5,
+            "left": 5,
+            "width": screen.availWidth/2,
+            "height": screen.availHeight/2
+        };              
+        chrome.windows.create(createData, function(){});        
     }
 });
 
 // for wikipedia
 
-let menuItem2 = {
+let menuItem3 = {
     "id": "Wikit",
-    "title": "Wikipedia",
+    "title": "Wikipedia Page",
     "contexts": ["selection"]
 };
 
-chrome.contextMenus.create(menuItem2);
+chrome.contextMenus.create(menuItem3);
 
 function fixedEncodeURI (str) {
     return encodeURI(str).replace(/%5B/g, '[').replace(/%5D/g, ']');
@@ -45,38 +71,13 @@ chrome.contextMenus.onClicked.addListener(function(clickData){
     }
 });
 
-// to translate
-
-let menuItem3 = {
-    "id": "translate",
-    "title": "Translate",
-    "contexts": ["selection"]
-};
-
-chrome.contextMenus.create(menuItem3);
-
-chrome.contextMenus.onClicked.addListener(function(clickData){   
-    if (clickData.menuItemId == "translate" && clickData.selectionText){    
-        let convert = JSON.stringify(clickData.selectionText)
-        let TranslateUrl = "https://translate.google.com/?sl=en&tl=hi&text=" + convert + "&op=translate";
-        let createData = {
-            "url": TranslateUrl,
-            "type": "popup",
-            "top": 5,
-            "left": 5,
-            "width": screen.availWidth/2,
-            "height": screen.availHeight/2
-        };              
-        chrome.windows.create(createData, function(){});        
-    }
-});
 
 // for youtube search
 
 
 let menuItem4 = {
     "id": "youtube",
-    "title": "Youtube",
+    "title": "Youtube Search",
     "contexts": ["selection"]
 };
 
@@ -102,7 +103,7 @@ chrome.contextMenus.onClicked.addListener(function(clickData){
 
 let menuItem5 = {
     "id": "images",
-    "title": "Google Images",
+    "title": "Related Images",
     "contexts": ["selection"]
 };
 
