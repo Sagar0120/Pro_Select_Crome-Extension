@@ -11,8 +11,8 @@ h2{
 .list{
     color: white;
     font-size: 20px;
-    padding: 5px;
-    margin: 5px;
+    padding: 5px 0px 5px 0px;
+    margin: 5px 0px 5px 0px;
 }
 h1:hover {
     background-color: white;
