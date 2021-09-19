@@ -9,7 +9,9 @@
       "default_popup": "popup.html"
     },
     "icons": {
-      "128": "128.png" 
+      "16": "16X16.png",
+      "48": "48X48.png",
+      "128": "128X128.png"
     },
   
     "background": {
