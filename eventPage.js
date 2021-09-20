@@ -77,7 +77,7 @@ chrome.contextMenus.onClicked.addListener(function(clickData){
 
 let menuItem4 = {
     "id": "youtube",
-    "title": "Youtube Search",
+    "title": "YouTube Search",
     "contexts": ["selection"]
 };
 
