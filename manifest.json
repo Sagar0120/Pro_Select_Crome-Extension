@@ -2,8 +2,8 @@
     "manifest_version": 2,
   
     "name": "Pro Select",
-    "description": "Pro Select Extension helps you finding the correct prounciation of word/s and it translates word or sentence to Hindi, If user want to deep dive into the word they can look for it Wikipedia Page and to get visuals user can watch the YouTube videos about that word and if user wants to refer to static visiuals user can look for Related Images",
-    "version": "1.0",
+    "description": "Pro Select helps you Pronounce,Translate,Wikipedia Page,YouTube Search,Related Images for the selected text.",
+    "version": "1.0.2",
 
     "browser_action":{
       "default_popup": "popup.html"
