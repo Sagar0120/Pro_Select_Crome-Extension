@@ -18,16 +18,48 @@ chrome.contextMenus.onClicked.addListener(function(clickData){
 
 // to translate
 
-let menuItem2 = {
-    "id": "translate",
-    "title": "Translation",
+chrome.contextMenus.create({
+    title: "Translation",
+    id: "parentTra",
+    contexts:["selection"]
+  });
+
+let menuItemTranslateG = {
+    "id": "translateG",
+    parentId: "parentTra",
+    "title": "Gujarati",
     "contexts": ["selection"]
 };
 
-chrome.contextMenus.create(menuItem2);
+chrome.contextMenus.create(menuItemTranslateG);
 
 chrome.contextMenus.onClicked.addListener(function(clickData){   
-    if (clickData.menuItemId == "translate" && clickData.selectionText){    
+    if (clickData.menuItemId == "translateG" && clickData.selectionText){    
+        let convert = JSON.stringify(clickData.selectionText)
+        let TranslateUrl = "https://translate.google.com/?sl=en&tl=gu&text=" + convert + "&op=translate";
+        let createData = {
+            "url": TranslateUrl,
+            "type": "popup",
+            "top": 5,
+            "left": 5,
+            "width": screen.availWidth/2,
+            "height": screen.availHeight/2
+        };              
+        chrome.windows.create(createData, function(){});        
+    }
+});
+
+let menuItemTranslateH = {
+    "id": "translateH",
+    parentId: "parentTra",
+    "title": "Hindi",
+    "contexts": ["selection"]
+};
+
+chrome.contextMenus.create(menuItemTranslateH);
+
+chrome.contextMenus.onClicked.addListener(function(clickData){   
+    if (clickData.menuItemId == "translateH" && clickData.selectionText){    
         let convert = JSON.stringify(clickData.selectionText)
         let TranslateUrl = "https://translate.google.com/?sl=en&tl=hi&text=" + convert + "&op=translate";
         let createData = {
@@ -89,6 +121,70 @@ chrome.contextMenus.onClicked.addListener(function(clickData){
         let YoutubeUrl = "https://www.youtube.com/results?search_query=" + convert;
         let createData = {
             "url": YoutubeUrl,
+            "type": "popup",
+            "top": 5,
+            "left": 5,
+            "width": screen.availWidth/2,
+            "height": screen.availHeight/2
+        };              
+        chrome.windows.create(createData, function(){});        
+    }
+});
+
+
+// for Online course
+
+chrome.contextMenus.create({
+    title: "Online Courses",
+    id: "parent",
+    contexts:["selection"]
+  });
+  
+// for coursera
+
+let menuItemCourse1 = {
+    "id": "coursera",
+    parentId: "parent",
+    "title": "Course on Coursera",
+    "contexts": ["selection"]
+};
+
+chrome.contextMenus.create(menuItemCourse1);
+
+chrome.contextMenus.onClicked.addListener(function(clickData){   
+    if (clickData.menuItemId == "coursera" && clickData.selectionText){    
+        let convert = JSON.stringify(clickData.selectionText)
+        let courseraUrl = "https://www.coursera.org/search?query=" + convert + "&skipBrowseRedirect=true";
+        let createData = {
+            "url": courseraUrl,
+            "type": "popup",
+            "top": 5,
+            "left": 5,
+            "width": screen.availWidth/2,
+            "height": screen.availHeight/2
+        };              
+        chrome.windows.create(createData, function(){});        
+    }
+});
+
+
+// for Udemy
+
+let menuItemCourse2 = {
+    "id": "udemy",
+    parentId: "parent",
+    "title": "Course on Udemy",
+    "contexts": ["selection"]
+};
+
+chrome.contextMenus.create(menuItemCourse2);
+
+chrome.contextMenus.onClicked.addListener(function(clickData){   
+    if (clickData.menuItemId == "udemy" && clickData.selectionText){    
+        let convert = JSON.stringify(clickData.selectionText)
+        let UdemyUrl = "https://www.udemy.com/courses/search/?src=ukw&q=" + convert;
+        let createData = {
+            "url": UdemyUrl,
             "type": "popup",
             "top": 5,
             "left": 5,
