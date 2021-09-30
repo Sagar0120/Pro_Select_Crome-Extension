@@ -1,4 +1,4 @@
-// for speak
+// for Pronunciation
 let menuItem1 = {
     "id": "Speak",
     "title": "Pronunciation",
@@ -16,7 +16,7 @@ chrome.contextMenus.onClicked.addListener(function(clickData){
     }
 });
 
-// to translate
+// to translation
 
 chrome.contextMenus.create({
     title: "Translation",
@@ -75,7 +75,7 @@ chrome.contextMenus.onClicked.addListener(function(clickData){
     }
 });
 
-// for wikipedia
+// for wikipedia Page
 
 let menuItem3 = {
     "id": "Wikit",
@@ -218,7 +218,8 @@ chrome.contextMenus.onClicked.addListener(function(clickData){
             "width": screen.availWidth/2,
             "height": screen.availHeight/2
         };              
-        chrome.windows.create(createData, function(){});        
+        chrome.windows.create(createData, function(){});    
+        
     }
 });
 
