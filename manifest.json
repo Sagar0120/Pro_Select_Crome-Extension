@@ -3,7 +3,7 @@
   
     "name": "Pro Select",
     "description": "Pro Select helps you Pronounce,Translate,Wikipedia Page,YouTube Search,Related Images for the selected text.",
-    "version": "1.0.2",
+    "version": "1.0.3",
 
     "browser_action":{
       "default_popup": "popup.html"
